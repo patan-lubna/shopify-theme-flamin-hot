@@ -1,0 +1,29 @@
+
+<h1>Home Section - {{ section.settings.section_heading }}</h1>
+{%- for block in section.blocks -%}
+    <p>{{ block.settings.section_headings }}</p>
+{%- endfor -%}
+{%-schema -%}
+{
+    "name":"Home Info",
+    "settings": [{
+      "type": "text",
+      "id": "section_heading",
+      "info": "Section Information",
+      "label": "Section Info",
+      "default":"Demo"
+    }],
+    "tag": "section",
+    "class": "home_info",
+    "blocks": [{
+        "type": "theme",
+        "name": "section_blocks",
+        "settings":[{
+            "type": "text",
+            "id": "section_headings",
+            "label": "Section Infos"
+        }]
+    }],
+    "presets": []
+}
+{%-endschema-%}
